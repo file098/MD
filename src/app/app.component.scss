@@ -15,13 +15,20 @@
     position: absolute;
 }
 
-.bar-container a,
-p {
+.default-bar-text {
     text-decoration: none;
     font-size: 25px;
     font-weight: bolder;
-    color: var(--primary-light-color);
+    // color: var(--primary-light-color);
 }
+
+// .primary-light-color {
+//     color: var(--primary-light-color);
+// }
+
+// .primary-dark-color {
+//     color: var(--primary-dark-color);
+// }
 
 footer {
     bottom: 0;

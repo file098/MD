@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewChecked, Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -7,48 +7,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
+  sections: string[] = [];
+
+
   constructor() { }
 
   ngOnInit(): void {
+    window.addEventListener('scroll', this.scrollEvent, true);
+
+    document.querySelectorAll('section').forEach(elem => {
+      this.sections.push(elem.id);
+    });
   }
 
-  // var util = {
-  //   mobileMenu() {
-  //     $("#nav").toggleClass("nav-visible");
-  //   },
-  //   windowResize() {
-  //     if ($(window).width() > 800) {
-  //       $("#nav").removeClass("nav-visible");
-  //     }
-  //   },
-  //   scrollEvent() {
-  //     var scrollPosition = $(document).scrollTop();
-      
-  //     $.each(util.scrollMenuIds, function(i) {
-  //       var link = util.scrollMenuIds[i],
-  //           container = $(link).attr("href"),
-  //           containerOffset = $(container).offset().top,
-  //           containerHeight = $(container).outerHeight(),
-  //           containerBottom = containerOffset + containerHeight;
-  
-  //       if (scrollPosition < containerBottom - 20 && scrollPosition >= containerOffset - 20) {
-  //         $(link).addClass("active");
-  //       } else {
-  //         $(link).removeClass("active");
-  //       }
-  //     });
-  //   }
-  // };
-  
-  // $(document).ready(function() {
-    
-  //   util.scrollMenuIds = $("a.nav-link[href]");
-  //   $("#menu").click(util.mobileMenu);
-  //   $(window).resize(util.windowResize);
-  //   $(document).scroll(util.scrollEvent);
-    
-  // });
-  
+  scrollEvent(): boolean {
+    return window.scrollY >= window.innerHeight;
+  }
+
+  scrollToSection(el: string) {
+    let section = document.querySelector('section#'+el)
+    section?.scrollIntoView({ block: 'start', inline: 'start', behavior: 'smooth' });
+  }
 
 }
 

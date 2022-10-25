@@ -58,28 +58,23 @@
     <nav id="nav">
         <div class="nav left">
             <span class="gradient">
-                <h1 class="logo"><a href="#home">Logo Here</a></h1>
+                <h1 class="logo"> <a #logo onClick="window.scrollTo({top:0})">Logo Here</a></h1>
             </span>
-            <button id="menu" class="btn-nav"><span class="fas fa-bars"></span></button>
         </div>
-        <div class="nav right">
-            <a href="#home" class="nav-link active"><span class="nav-link-span"><span
-                        class="u-nav">Home</span></span></a>
-            <a href="#about" class="nav-link"><span class="nav-link-span"><span class="u-nav">About</span></span></a>
-            <a href="#work" class="nav-link"><span class="nav-link-span"><span class="u-nav">Work</span></span></a>
-            <a href="#contact" class="nav-link"><span class="nav-link-span"><span
-                        class="u-nav">Contact</span></span></a>
+        <div class="right nav" [ngClass]="this.scrollEvent() ? 'primary-dark-color' : 'primary-light-color'">
+            <a #section class="nav-link" *ngFor="let links of sections" (click)="this.scrollToSection(links)">{{links}}</a>
         </div>
     </nav>
 </header>
+
 <main>
     <section id="home">
         <home></home>
     </section>
     <section id="about">
 
-    </section>
-    <section id="work">
+        <!-- </section>
+    <section id="work"> -->
 
     </section>
     <section id="contact">
