@@ -7,11 +7,13 @@ import { HomeComponent } from './home/home.component';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { WorksComponent } from './works/works.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+    WorksComponent,
   ],
   imports: [
     BrowserModule,

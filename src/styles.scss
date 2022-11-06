@@ -28,8 +28,8 @@ section {
 
 .img-placeholder {
   height: 100vh;
-  // background-image: url("https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-  background-color: blue;
+  background-image: url("https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  // background-color: blue;
   background-position: center;
   /* Center the image */
   background-repeat: no-repeat;
@@ -38,9 +38,22 @@ section {
   /* Resize the background image to cover the entire container */
 }
 
+.main-title {
+  color: var(--primary-light-color);
+  font-size: 4em;
+  font-family: "Cookie";
+}
+
 .fadeIn {
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
+}
+
+.animate {
+  -webkit-animation-duration: 3.5s;
+  animation-duration: 3.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 
 .animateFirst {

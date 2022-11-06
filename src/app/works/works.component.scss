@@ -1,0 +1,40 @@
+.even-columns {
+  height: max-content;
+  display: flex;
+  gap: 2rem;
+  justify-content: space-evenly;
+  padding: 2rem 0;
+}
+
+.even-columns > :nth-child(2) {
+  flex-flow: column-reverse;
+}
+
+.even-columns > * {
+  flex: 1;
+}
+
+.card {
+  max-width: 25%;
+  padding: 2rem;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.sub-title {
+  color: var(--primary-dark-color);
+  font-size: 2rem;
+  font-family: "Cookie";
+}
+
+.line {
+  width: 2px;
+  height: 100px;
+  background-color: var(--primary-dark-color);
+}
+
+img {
+  max-width: 100%;
+  max-height: 720px;
+}

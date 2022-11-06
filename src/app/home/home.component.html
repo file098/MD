@@ -10,14 +10,6 @@
     </nav>
 </header>
 
-<style>
-    header {
-        mix-blend-mode: difference;
-        filter: invert(1);
-
-    }
-</style>
-
 <main>
     <section id="home">
         <div class="img-placeholder text-container animate fadeIn">
@@ -36,17 +28,12 @@
         </div>
     </section>
 
-    <section id="Cosa facciamo">
-        <div class="img-placeholder animate fadeIn description-container">
-            <h1 id="about-us" class="main-title" style="color:black">
-                Siamo una piccola azienda a coduzione familiare del territorio friulano, che opera nel settore
-                dell'ortofrutta. Siamo anche specializzati nella realizzazione di addobbi floreali per cerimonie.
-            </h1>
-        </div>
+    <section id="Cosa facciamo" style="height: 100%;">
+            <app-works></app-works>
     </section>
 
     <section id="Contatti">
-        <div class="container">
+        <div class="vertical-wrapper">
             <div class="animateSecond fadeIn">
                 <div class="panel-content">
                     <iframe
