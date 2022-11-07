@@ -145,7 +145,24 @@ footer > * {
   white-space: nowrap;
 }
 
-@media (min-width: 800px) {
+.scroll-btn {
+  position: fixed;
+  display: none;
+  right: 0;
+  bottom: 0;
+  margin: 1rem;
+  border-radius: 100%;
+  width: 48px;
+  height: 48px;
+  mix-blend-mode: overlay;
+}
+
+@media all and (min-width: 481px) and (max-width: 1280px) {
+
+  .main-title {
+    font-size: 2em;
+  }
+
   #nav-wrapper {
     overflow: hidden;
   }
@@ -177,20 +194,24 @@ footer > * {
 
 @media all and (max-width: 480px) {
 
+  iframe {
+    max-width: 80%;
+  }
+
+  .scroll-btn {
+    display: block;
+  }
+
   footer {
     display: none;
   }
 
-  .main-title {
-    font-size: 2em;
+  .vertical-wrapper {
+    padding: 2rem;
   }
 
-  .no-wrap {
-    white-space: unset;
-  }
-
-  .main-title {
-    font-size: 3em;
+  .vertical {
+    padding: 1rem;
   }
 
   #logo {
@@ -202,7 +223,7 @@ footer > * {
   }
 
   .main-title {
-    font-size: 3em;
+    font-size: 2em;
   }
 
   #about-us {

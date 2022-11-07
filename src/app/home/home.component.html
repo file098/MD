@@ -1,63 +1,75 @@
 <header class="nav-wrapper">
-    <nav id="nav">
-        <div class="nav left">
-                <h1 class="logo"> <a #logo onClick="window.scrollTo({top:0})">Logo Here</a></h1>
-        </div>
-        <div class="right nav">
-            <a #section class="nav-link" *ngFor="let links of sections"
-                (click)="this.scrollToSection(links)">{{links}}</a>
-        </div>
-    </nav>
+  <nav id="nav">
+    <div class="nav left">
+      <h1 class="logo">
+        <a #logo onClick="window.scrollTo({top:0})">Logo Here</a>
+      </h1>
+    </div>
+    <div class="right nav">
+      <a
+        #section
+        class="nav-link"
+        *ngFor="let links of sections"
+        (click)="this.scrollToSection(links)"
+        >{{ links }}</a
+      >
+    </div>
+  </nav>
 </header>
 
 <main>
-    <section>
-        <div class="img-placeholder text-container animate fadeIn">
-            <h1 class="main-title">
-                Ogni giorno portiamo nella tua tavola ortaggi e verdura di prima qualità, dal 1985.
-            </h1>
+  <section>
+    <div class="img-placeholder text-container animate fadeIn">
+      <h1 class="main-title">
+        Ogni giorno portiamo nella tua tavola ortaggi e verdura di prima
+        qualità, dal 1985.
+      </h1>
+    </div>
+  </section>
+
+  <section id="Chi siamo">
+    <div class="description-container">
+      <h1 id="about-us" class="main-title" style="color: black">
+        Siamo una piccola azienda a coduzione familiare del territorio friulano,
+        che opera nel settore dell'ortofrutta. Siamo anche specializzati nella
+        realizzazione di addobbi floreali per cerimonie.
+      </h1>
+    </div>
+  </section>
+
+  <section id="Cosa facciamo" style="height: 100%">
+    <app-works></app-works>
+  </section>
+
+  <section id="Contatti">
+    <div class="vertical-wrapper">
+      <div class="panel-content">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2782.6101180122155!2d12.99608113335718!3d45.77900331227626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477bc1f8d9c06fe5%3A0x433ad624714fe3a3!2sMD%20L&#39;Ortofrutticola!5e0!3m2!1sit!2sit!4v1665089601016!5m2!1sit!2sit"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+
+      <div class="panel-content">
+        <div class="vertical">
+          <p>Via C. Percoto, 35 33053 Latisana (UD)</p>
+          <p>+39 0431 50112</p>
+          <p>mdortofrutticola@gmail.com</p>
         </div>
-    </section>
-
-    <section id="Chi siamo">
-        <div class="description-container">
-            <h1 id="about-us" class="main-title" style="color:black">
-                Siamo una piccola azienda a coduzione familiare del territorio friulano, che opera nel settore
-                dell'ortofrutta. Siamo anche specializzati nella realizzazione di addobbi floreali per cerimonie.
-            </h1>
-        </div>
-    </section>
-
-    <section id="Cosa facciamo" style="height: 100%;">
-            <app-works></app-works>
-    </section>
-
-    <section id="Contatti">
-        <div class="vertical-wrapper">
-            <div class="animateSecond fadeIn">
-                <div class="panel-content">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2782.6101180122155!2d12.99608113335718!3d45.77900331227626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477bc1f8d9c06fe5%3A0x433ad624714fe3a3!2sMD%20L&#39;Ortofrutticola!5e0!3m2!1sit!2sit!4v1665089601016!5m2!1sit!2sit"
-                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-            </div>
-
-            <div class="animateFirst fadeIn">
-                <div class="panel-content">
-                    <div class="vertical">
-                        <p>Via C. Percoto, 35 33053 Latisana (UD)</p>
-                        <p>+39 0431 50112</p>
-                        <p>mdortofrutticola@gmail.com</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+      </div>
+    </div>
+  </section>
 </main>
 
+<!-- <button class="sc" onclick="window.scrollTo({top:0})"></button> -->
+
 <footer class="nav-wrapper bottom">
-    <a>Via C. Percoto, 35 33053 Latisana (UD)</a>
-    <a class="no-wrap">+39 0431 50112</a>
-    <a class="no-wrap">mdortofrutticola@gmail.com</a>
+  <a>Via C. Percoto, 35 33053 Latisana (UD)</a>
+  <a class="no-wrap">+39 0431 50112</a>
+  <a class="no-wrap">mdortofrutticola@gmail.com</a>
 </footer>

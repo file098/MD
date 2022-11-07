@@ -1,6 +1,6 @@
 .even-columns {
   background-color: var(--secondary-light-color);
-  min-width: 100vh;
+  // min-width: 100vh;
   height: max-content;
   display: flex;
   gap: 2rem;
@@ -39,4 +39,14 @@
 img {
   max-width: 100%;
   max-height: 720px;
+}
+
+@media all and (max-width: 480px) {
+  .even-columns {
+    flex-flow: column;
+    align-items: center;
+  }
+  .card {
+    max-width: unset;
+  }
 }
