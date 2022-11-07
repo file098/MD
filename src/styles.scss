@@ -29,6 +29,14 @@ section {
   background-color: transparent;
 }
 
+.primary-light-color {
+  color:var(--primary-light-color)
+}
+
+.primary-dark-color {
+  color:var(--primary-dark-color)
+}
+
 .img-placeholder {
   height: 100vh;
   background-image: url("https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
@@ -43,7 +51,6 @@ section {
 
 .main-title {
   color: var(--primary-light-color);
-  // font-size: 4em;font-size: calc( 16px + (24 - 16) * (100vw - 400px) / (800 - 400) );
   font-size: calc( 3em + (24 - 16) * (100vw - 400px) / (800 - 400) );
   font-family: "Cookie";
 }

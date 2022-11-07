@@ -1,5 +1,5 @@
 <header class="nav-wrapper top">
-  <nav id="nav">
+  <nav id="nav" [ngClass]="this.scrollEvent() ? 'primary-dark-color' : 'primary-light-color'">
     <div class="nav left">
       <h1 class="logo">
         <a #logo onClick="window.scrollTo({top:0})">Logo</a>
@@ -11,8 +11,7 @@
         class="nav-link"
         *ngFor="let links of sections"
         (click)="this.scrollToSection(links)"
-        >{{ links | titlecase }}</a
-      >
+        >{{ links | titlecase }}</a>
     </div>
   </nav>
 </header>
@@ -42,35 +41,13 @@
   </section>
 
   <section id="contatti">
-    <div class="vertical-wrapper">
-      <div class="panel-content iframe-container">
-        <iframe
-          class="iframe-box"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2782.6101180122155!2d12.99608113335718!3d45.77900331227626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477bc1f8d9c06fe5%3A0x433ad624714fe3a3!2sMD%20L&#39;Ortofrutticola!5e0!3m2!1sit!2sit!4v1665089601016!5m2!1sit!2sit"
-          frameborder="0"
-          scrolling="no"
-          marginheight="0"
-          marginwidth="0"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
-      </div>
-
-      <div class="panel-content">
-        <div id="vertical-contacts">
-          <p>Via C. Percoto, 35 33053 Latisana (UD)</p>
-          <p>+39 0431 50112</p>
-          <p>mdortofrutticola@gmail.com</p>
-        </div>
-      </div>
-    </div>
+    <app-contacts></app-contacts>
   </section>
 </main>
 
 <!-- <button class="sc" onclick="window.scrollTo({top:0})"></button> -->
 
-<footer class="nav-wrapper bottom">
+<footer class="nav-wrapper bottom" [ngClass]="this.scrollEvent() ? 'primary-dark-color' : 'primary-light-color'">
   <a>Via C. Percoto, 35 33053 Latisana (UD)</a>
   <a class="no-wrap">+39 0431 50112</a>
   <a class="no-wrap">mdortofrutticola@gmail.com</a>

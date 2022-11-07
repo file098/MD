@@ -8,12 +8,14 @@ import { HomeComponent } from './home/home.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { WorksComponent } from './works/works.component';
+import { ContactsComponent } from './contacts/contacts.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     WorksComponent,
+    ContactsComponent,
   ],
   imports: [
     BrowserModule,

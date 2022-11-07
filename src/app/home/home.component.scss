@@ -6,37 +6,6 @@
   padding: 0 2em;
 }
 
-.vertical-wrapper {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-wrap: wrap;
-  height: 100vh;
-  padding: 4em 0;
-}
-
-.panel-content {
-  height: 100%;
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
-}
-
-#vertical-contacts {
-  display: flex;
-  flex-flow: column;
-  border-left: 1px solid black;
-  padding-left: 20%;
-  margin-left: 5%;
-}
-
-.vertical p {
-  padding: 2vh;
-  font: bolder;
-  font-size: larger;
-}
-
 #nav {
   display: flex;
   flex-direction: row;
@@ -53,7 +22,7 @@
 
 .nav-link {
   font-size: calc(15px + 0.390625vw);
-  font-family: "Courier New", Courier, monospace;
+  // font-family: "Courier New", Courier, monospace;
   margin-left: auto;
 }
 
@@ -95,8 +64,8 @@ footer {
   flex-flow: row;
   justify-content: space-around;
   padding-bottom: 1rem;
-  mix-blend-mode: difference;
-  filter: invert(100%);
+  // mix-blend-mode: difference;
+  // filter: invert(100%);
 }
 
 footer > * {
@@ -152,16 +121,7 @@ footer > * {
   mix-blend-mode: overlay;
 }
 
-.iframe-box {
-  width:380px;
-  height:500px;
-}
-
 @media all and (min-width: 481px) and (max-width: 1280px) {
-  // .main-title {
-  //   font-size: 2em;
-  // }
-
   #nav-wrapper {
     overflow: hidden;
   }
@@ -180,21 +140,11 @@ footer > * {
       padding-right: 1.5em;
     }
   }
-
-  .iframe-box {
-    width:25rem;
-    height:25rem;
-  }
 }
 
 @media all and (max-width: 480px) {
-
   .right {
     display: none;
-  }
-
-  iframe {
-    max-width: 80%;
   }
 
   .scroll-btn {
@@ -209,28 +159,11 @@ footer > * {
     padding: 2rem;
   }
 
-  .vertical {
-    padding: 1rem;
-  }
-
   #logo {
     margin-left: 2em;
   }
 
   .bar-container > * {
     font-size: 0.5em;
-  }
-
-  // .main-title {
-  //   font-size: 2em;
-  // }
-
-  #about-us {
-    font-size: 2em;
-  }
-
-  .iframe-box {
-    width: 300px !important;
-    height: 300px !important;
   }
 }
