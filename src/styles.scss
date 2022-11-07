@@ -43,7 +43,8 @@ section {
 
 .main-title {
   color: var(--primary-light-color);
-  font-size: 4em;
+  // font-size: 4em;font-size: calc( 16px + (24 - 16) * (100vw - 400px) / (800 - 400) );
+  font-size: calc( 3em + (24 - 16) * (100vw - 400px) / (800 - 400) );
   font-family: "Cookie";
 }
 
