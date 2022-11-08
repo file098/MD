@@ -1,5 +1,5 @@
 <div class="even-columns">
-  <div class="card">
+  <div class="card" [ngClass]="isInViewport() ? 'slide-card-up' : ''">
     <p class="sub-title card-descrition">
       Ogni giorno portiamo nella tua tavola ortaggi e verdura di prima qualtità,
       dal 1985.
@@ -8,7 +8,7 @@
     <img src="../../assets/fruit.jpg" />
   </div>
 
-  <div class="card">
+  <div class="card" [ngClass]="isInViewport() ? 'slide-card-down' : ''">
     <p class="sub-title card-descrition">
       Ogni giorno portiamo nella tua tavola ortaggi e verdura di prima qualtità,
       dal 1985.

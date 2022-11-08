@@ -21,7 +21,6 @@ export class HomeComponent implements OnInit {
   }
 
   scrollEvent(): boolean {
-    console.log(window.scrollY >= window.innerHeight);
     return window.scrollY >= window.innerHeight;
     
   }

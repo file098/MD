@@ -1,3 +1,7 @@
+:root {
+  --offset: 800;
+}
+
 .even-columns {
   background-color: var(--secondary-light-color);
   min-height: 100vh;
@@ -22,6 +26,21 @@
   display: flex;
   flex-flow: column;
   align-items: center;
+  position: relative;
+}
+
+.slide-card-up {
+  transform: translateY(900);
+  -webkit-animation: slideInDown 1.5s forwards;
+  -moz-animation: slideInDown 1.5s forwards;
+  animation: slideInDown 1.5s forwards;
+}
+
+.slide-card-down {
+  transform: translateY(-900);
+  -webkit-animation: slideInUp 1.5s forwards;
+  -moz-animation: slideInUp 1.5s forwards;
+  animation: slideInUp 1.5s forwards;
 }
 
 .sub-title {
@@ -48,5 +67,55 @@ img {
   }
   .card {
     max-width: unset;
+  }
+}
+
+@-webkit-keyframes slideInUp {
+  0% {
+    transform: translateY(-900px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@-moz-keyframes slideInUp {
+  0% {
+    transform: translateY(-900px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes slideInUp {
+  0% {
+    transform: translateY(-900px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes slideInDown {
+  0% {
+    transform: translateY(900px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@-moz-keyframes slideInDown {
+  0% {
+    transform: translateY(900px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes slideInDown {
+  0% {
+    transform: translateY(900px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
