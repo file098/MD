@@ -1,6 +1,4 @@
-:root {
-  --offset: 800;
-}
+$offset: 700px;
 
 .even-columns {
   background-color: var(--secondary-light-color);
@@ -29,18 +27,24 @@
   position: relative;
 }
 
+.left {
+  transform: translateY($offset);
+}
+
+.right {
+  transform: translateY(-$offset);
+}
+
 .slide-card-up {
-  transform: translateY(900);
-  -webkit-animation: slideInDown 1.5s forwards;
-  -moz-animation: slideInDown 1.5s forwards;
-  animation: slideInDown 1.5s forwards;
+  -webkit-animation: slideInDown 3s forwards;
+  -moz-animation: slideInDown 3s forwards;
+  animation: slideInDown 3s forwards;
 }
 
 .slide-card-down {
-  transform: translateY(-900);
-  -webkit-animation: slideInUp 1.5s forwards;
-  -moz-animation: slideInUp 1.5s forwards;
-  animation: slideInUp 1.5s forwards;
+  -webkit-animation: slideInUp 3s forwards;
+  -moz-animation: slideInUp 3s forwards;
+  animation: slideInUp 3s forwards;
 }
 
 .sub-title {
@@ -72,7 +76,7 @@ img {
 
 @-webkit-keyframes slideInUp {
   0% {
-    transform: translateY(-900px);
+    transform: translateY(-$offset);
   }
   100% {
     transform: translateY(0);
@@ -80,7 +84,7 @@ img {
 }
 @-moz-keyframes slideInUp {
   0% {
-    transform: translateY(-900px);
+    transform: translateY(-$offset);
   }
   100% {
     transform: translateY(0);
@@ -88,7 +92,7 @@ img {
 }
 @keyframes slideInUp {
   0% {
-    transform: translateY(-900px);
+    transform: translateY(-$offset);
   }
   100% {
     transform: translateY(0);
@@ -97,7 +101,7 @@ img {
 
 @-webkit-keyframes slideInDown {
   0% {
-    transform: translateY(900px);
+    transform: translateY($offset);
   }
   100% {
     transform: translateY(0);
@@ -105,7 +109,7 @@ img {
 }
 @-moz-keyframes slideInDown {
   0% {
-    transform: translateY(900px);
+    transform: translateY($offset);
   }
   100% {
     transform: translateY(0);
@@ -113,7 +117,7 @@ img {
 }
 @keyframes slideInDown {
   0% {
-    transform: translateY(900px);
+    transform: translateY($offset);
   }
   100% {
     transform: translateY(0);

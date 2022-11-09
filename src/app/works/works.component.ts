@@ -8,19 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class WorksComponent implements OnInit {
   rect: DOMRect | undefined = undefined;
 
-  contentPassed: boolean = false;
-
   constructor() {}
 
   ngOnInit(): void {}
-
-  ngAfterViewChecked(): void {
-    //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
-    //Add 'implements AfterViewInit' to the class.
-    // this.rect = document
-    //   .querySelector('.even-columns')!
-    //   .getBoundingClientRect();
-  }
 
   isInViewport() {
     const offset = 600;
@@ -30,9 +20,9 @@ export class WorksComponent implements OnInit {
 
     const result = box!.top <= offset;
 
-    if(!this.contentPassed){
-      this.contentPassed = true;
-    }
+    // Add the controll for scrolling back up
+
+    console.log(result);
 
     return result;
   }
