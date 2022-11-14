@@ -21,9 +21,13 @@
 }
 
 .nav-link {
-  font-size: calc(15px + 0.390625vw);
+  font-size: calc(15px + 1vw);
   // font-family: "Courier New", Courier, monospace;
   margin-left: auto;
+
+  &:last-child {
+    margin-right: 2rem;
+  }
 }
 
 .nav-link,
@@ -70,6 +74,7 @@ footer {
 
 footer > * {
   padding: 0 10px;
+  font-size: calc(15px + 0.5vw);
 }
 
 .text-container {

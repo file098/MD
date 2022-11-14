@@ -39,7 +39,9 @@ section {
 
 .img-placeholder {
   height: 100vh;
-  background-image: url("https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-image: 
+  radial-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  url("https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
   // background-color: blue;
   background-position: center;
   /* Center the image */

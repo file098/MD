@@ -1,4 +1,4 @@
-$offset: 700px;
+$offset: 500px;
 
 .even-columns {
   background-color: var(--secondary-light-color);
@@ -21,6 +21,7 @@ $offset: 700px;
 .card {
   max-width: 25%;
   padding: 2rem;
+  margin: 0 25px;
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -49,28 +50,42 @@ $offset: 700px;
 
 .sub-title {
   color: var(--primary-dark-color);
-  font-size: 2rem;
+  font-size: 4rem;
   font-family: "Cookie";
 }
 
 .line {
   width: 2px;
-  height: 100px;
+  height: calc(2vh + 30px);
   background-color: var(--primary-dark-color);
 }
 
 img {
   max-width: 100%;
-  max-height: 720px;
 }
 
+// Tablet
+@media all and (min-width: 481px) and (max-width: 1280px) {
+
+}
+
+// Phones
 @media all and (max-width: 480px) {
+
   .even-columns {
     flex-flow: column;
     align-items: center;
   }
   .card {
     max-width: unset;
+  }
+
+  img {
+    max-width: 80%;
+  }
+
+  .sub-title {
+    font-size: 1.3rem;
   }
 }
 

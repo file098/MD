@@ -14,8 +14,8 @@
 }
 
 .iframe-box {
-  width: 700px;
-  height: 400px;
+  width: 50vh;
+  height: 50vh;
 }
 
 #vertical-contacts {
@@ -28,8 +28,8 @@
 
 #vertical-contacts p {
   padding: 2vh;
+  font-size: 2rem;
   font: bolder;
-  font-size: larger;
 }
 
 // Tablet
@@ -47,7 +47,6 @@
   //   }
   .vertical-wrapper {
     flex-flow: column;
-    // justify-content: unset;
   }
 
   .vertical {

@@ -7,11 +7,15 @@
     </div>
     <div class="right nav">
       <a
+        [ngClass]="
+          this.scrollEvent() ? 'primary-dark-color' : 'primary-light-color'
+        "
         #section
         class="nav-link"
         *ngFor="let links of sections"
         (click)="this.scrollToSection(links)"
-        >{{ links | titlecase }}</a>
+        >{{ links | titlecase }}</a
+      >
     </div>
   </nav>
 </header>
