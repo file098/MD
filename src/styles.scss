@@ -4,6 +4,7 @@
   --primary-light-color: #f4f7f6;
   --primary-dark-color: #0f0f0f;
   --secondary-light-color: #f1f1f1;
+  --background-color: #fdf4e4;
 }
 
 html {
@@ -16,7 +17,7 @@ body {
 }
 
 html, body {
-  background-color: #fdf4e4;
+  background-color: var(--background-color);
 }
 
 main {
@@ -53,7 +54,7 @@ section {
 
 .main-title {
   color: var(--primary-light-color);
-  font-size: calc( 3em + (24 - 16) * (100vw - 400px) / (800 - 400) );
+  font-size: calc(3.5em + (24 - 16) * (100vw - 400px) / (800 - 400) );
   font-family: "Cookie";
 }
 

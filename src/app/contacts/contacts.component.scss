@@ -42,9 +42,6 @@
 
 // Phones
 @media all and (max-width: 480px) {
-  //   iframe {
-  //     max-width: 80%;
-  //   }
   .vertical-wrapper {
     flex-flow: column;
   }
@@ -56,5 +53,9 @@
   .iframe-box {
     width: 100%;
     height: 300px;
+  }
+
+  #vertical-contacts p {
+    font-size: 1.2rem;
   }
 }
