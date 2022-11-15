@@ -59,47 +59,34 @@ section {
 }
 
 .fadeIn {
-  -webkit-animation-name: fadeIn;
+  // -webkit-animation: fadeIn 2s ease-in;
+  // -moz-animation: fadeIn 2s ease-in;
+  // animation: fadeIn 2s ease-in;
+  // visibility:hidden;
+  opacity: 0;
+  animation-duration: 2s;
   animation-name: fadeIn;
-}
-
-.animate {
-  -webkit-animation-duration: 3.5s;
-  animation-duration: 3.5s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-
-.animateFirst {
-  -webkit-animation-duration: 3s;
-  animation-duration: 3s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-
-.animateSecond {
-  -webkit-animation-duration: 6s;
-  animation-duration: 6s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
+  animation-fill-mode: forwards; 
 }
 
 @-webkit-keyframes fadeIn {
-  from {
+  0% {
     opacity: 0;
   }
 
-  to {
+  100% {
     opacity: 1;
   }
 }
 
 @keyframes fadeIn {
-  from {
+  0% {
+    visibility:hidden; 
     opacity: 0;
   }
 
-  to {
+  100% {
+    visibility:visible; 
     opacity: 1;
   }
 }

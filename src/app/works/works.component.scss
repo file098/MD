@@ -59,7 +59,7 @@
 }
 
 img {
-  max-width: 100%;
+  max-width: 80%;
 }
 
 // Tablet
@@ -76,12 +76,16 @@ img {
     max-width: unset;
   }
 
-  img {
-    max-width: 80%;
+  .sub-title {
+    font-size: 2rem;
   }
 
-  .sub-title {
-    font-size: 1.3rem;
+  .card.right {
+    margin-bottom: unset;
+  }
+  
+  .card.left {
+    margin-top: unset;
   }
 }
 
@@ -109,15 +113,6 @@ img {
   }
   to {
     transform: translateX(0%);
-  }
-}
-
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
   }
 }
 

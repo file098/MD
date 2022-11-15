@@ -30,6 +30,8 @@
   padding: 2vh;
   font-size: 2rem;
   font: bolder;
+  opacity: 0;
+  // -webkit-animation: fadeIn 2s 1 forwards,
 }
 
 // Tablet
@@ -55,7 +57,10 @@
     height: 300px;
   }
 
-  #vertical-contacts p {
-    font-size: 1.2rem;
+  #vertical-contacts {
+    padding-left: 1em;
+    & p {
+      font-size: 1.2rem;
+    }
   }
 }
