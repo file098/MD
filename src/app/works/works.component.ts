@@ -36,7 +36,7 @@ export class WorksComponent implements OnInit {
   @ViewChild('columns') yourElement: ElementRef | undefined;
 
   ngAfterViewInit() {
-    const threshold = 0.2; // how much % of the element is in view
+    const threshold = 0.1; // how much % of the element is in view
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
