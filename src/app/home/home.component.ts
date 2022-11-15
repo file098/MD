@@ -9,6 +9,7 @@ export class HomeComponent implements OnInit {
 
   sections: string[] = [];
   color: string = "#fff";
+  scrolledOver : boolean = false;
 
   constructor() { }
 
@@ -21,7 +22,8 @@ export class HomeComponent implements OnInit {
   }
 
   scrollEvent(): boolean {
-    return window.scrollY >= window.innerHeight;
+    this.scrolledOver = window.scrollY >= window.innerHeight;
+    return this.scrolledOver;
     
   }
 

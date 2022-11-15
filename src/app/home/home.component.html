@@ -22,7 +22,7 @@
 
 <main>
   <section>
-    <div class="img-placeholder text-container animate fadeIn">
+    <div class="img-placeholder text-container fadeIn">
       <h1 class="main-title reveal-text">
         Ogni giorno portiamo nella tua tavola ortaggi e verdura di prima
         qualità, dal 1985.
@@ -31,8 +31,8 @@
   </section>
 
   <section id="chi siamo">
-    <div class="text-container">
-      <h1 id="about-us" class="main-title" style="color: black">
+    <div class="text-container" style="height: 100vh">
+      <h1 id="about-us" class="main-title">
         Siamo una piccola azienda a coduzione familiare del territorio friulano,
         che opera nel settore dell'ortofrutta. Siamo anche specializzati nella
         realizzazione di addobbi floreali per cerimonie.
@@ -40,7 +40,7 @@
     </div>
   </section>
 
-  <section id="cosa facciamo" style="height: 100%">
+  <section id="cosa facciamo">
     <app-works></app-works>
   </section>
 
@@ -51,7 +51,10 @@
 
 <!-- <button class="sc" onclick="window.scrollTo({top:0})"></button> -->
 
-<footer class="nav-wrapper bottom">
+<footer
+  class="nav-wrapper bottom"
+  [ngClass]="this.scrolledOver ? 'primary-dark-color' : 'primary-light-color'"
+>
   <a>Via C. Percoto, 35 33053 Latisana (UD)</a>
   <a class="no-wrap">+39 0431 50112</a>
   <a class="no-wrap">mdortofrutticola@gmail.com</a>
