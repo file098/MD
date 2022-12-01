@@ -86,14 +86,6 @@ footer > * {
   padding: 0 15vh;
 }
 
-.text-container {
-  display: flex;
-  flex-flow: row;
-  justify-content: center;
-  align-items: center;
-  padding: 0 15vh;
-}
-
 .nav-wrapper {
   overflow: hidden;
   width: 100%;
@@ -126,6 +118,10 @@ footer > * {
   mix-blend-mode: overlay;
 }
 
+.main-title-smaller {
+  color: var(--primary-dark-color);
+}
+
 @media all and (min-width: 481px) and (max-width: 1280px) {
   #nav-wrapper {
     overflow: hidden;
@@ -148,6 +144,10 @@ footer > * {
 }
 
 @media all and (max-width: 480px) {
+  .main-title-smaller {
+    font-size: 2.5rem;
+  }
+  
   .right {
     display: none;
   }

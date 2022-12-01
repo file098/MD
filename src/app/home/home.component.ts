@@ -1,38 +1,42 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { ContactsComponent } from '../contacts/contacts.component';
 
 @Component({
   selector: 'home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
+  @ViewChild(ContactsComponent) contacts: ContactsComponent | undefined;
 
   sections: string[] = [];
-  color: string = "#fff";
-  scrolledOver : boolean = false;
+  color: string = '#fff';
+  scrolledOver: boolean = false;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
     window.addEventListener('scroll', this.scrollEvent, true);
-    document.querySelectorAll('section').forEach(elem => {
+    document.querySelectorAll('section').forEach((elem) => {
       this.sections.push(elem.id);
     });
-
   }
 
   scrollEvent(): boolean {
-    this.scrolledOver = window.scrollY >= window.innerHeight;
+    this.scrolledOver = !(window.scrollY == 0);
     return this.scrolledOver;
-    
   }
 
   scrollToSection(el: string) {
-    //  since the ids have spaces i need to confront them here with a str compare
-    let sectionCollection: NodeListOf<Element> = document.querySelectorAll('main section');
-    sectionCollection.forEach(node => {
+    let sectionCollection: NodeListOf<Element> =
+      document.querySelectorAll('main section');
+    sectionCollection.forEach((node) => {
       if (node.id.includes(el)) {
-        node.scrollIntoView({ block: 'start', inline: 'start', behavior: 'smooth' });
+        node.scrollIntoView({
+          block: 'start',
+          inline: 'start',
+          behavior: 'smooth',
+        });
       }
     });
   }

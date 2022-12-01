@@ -77,6 +77,19 @@ section {
   animation-fill-mode: forwards; 
 }
 
+.fadeOut {
+  // -webkit-animation: fadeIn 2s ease-in;
+  // -moz-animation: fadeIn 2s ease-in;
+  // animation: fadeIn 2s ease-in;
+  // visibility:hidden;
+  opacity: 0;
+  animation-duration: 1s;
+  animation-name: fadeOut;
+  animation-fill-mode: forwards; 
+  animation-direction: reverse;
+}
+
+
 @-webkit-keyframes fadeIn {
   0% {
     opacity: 0;
