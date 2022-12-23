@@ -1,9 +1,9 @@
 <header class="nav-wrapper top">
   <nav id="nav">
     <div class="nav left">
-      <h1 class="logo">
-        <a #logo onClick="window.scrollTo({top:0})">Logo</a>
-      </h1>
+      <a #logo onClick="window.scrollTo({top:0})"
+        ><img class="logo" src="../../assets/logo1.png"
+      /></a>
     </div>
     <div class="right nav">
       <a
@@ -51,7 +51,7 @@
 
 <!-- <button class="sc" onclick="window.scrollTo({top:0})"></button> -->
 
-<footer 
+<footer
   #footer
   class="nav-wrapper bottom"
   [ngClass]="this.contacts?.bottomReached ? 'fadeOut' : 'fadeIn'"

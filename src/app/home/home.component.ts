@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit {
   }
 
   scrollEvent(): boolean {
-    this.scrolledOver = !(window.scrollY == 0);
+    this.scrolledOver = !(window.scrollY <= 350);
     return this.scrolledOver;
   }
 

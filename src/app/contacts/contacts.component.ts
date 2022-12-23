@@ -1,4 +1,12 @@
-import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  EventEmitter,
+  Input,
+  OnInit,
+  Output,
+  ViewChild,
+} from '@angular/core';
 
 @Component({
   selector: 'app-contacts',
@@ -6,10 +14,9 @@ import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild }
   styleUrls: ['./contacts.component.scss'],
 })
 export class ContactsComponent implements OnInit {
+  @Input() bottomReached: boolean = false;
 
-  @Input() bottomReached : boolean = false;
-
-  @Output() bottomReachedChanged:EventEmitter<boolean> = new EventEmitter();
+  @Output() bottomReachedChanged: EventEmitter<boolean> = new EventEmitter();
 
   constructor() {}
 
@@ -17,8 +24,7 @@ export class ContactsComponent implements OnInit {
 
   @ViewChild('contacts') yourElement: ElementRef | undefined;
 
-
-  switchBottom(value:boolean) : void { 
+  switchBottom(value: boolean): void {
     this.bottomReached = value;
     this.bottomReachedChanged.emit(this.bottomReached);
   }
@@ -37,8 +43,7 @@ export class ContactsComponent implements OnInit {
               this.switchBottom(true);
             });
             // observer.disconnect(); // disconnect if you want to stop observing else it will rerun every time its back in view. Just make sure you disconnect in ngOnDestroy instead
-          }
-          else {
+          } else {
             this.switchBottom(false);
           }
         });
