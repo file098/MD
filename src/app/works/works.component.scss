@@ -24,6 +24,12 @@
   flex-flow: column;
   align-items: center;
   position: relative;
+
+  .sub-title {
+    color: var(--primary-dark-color);
+    font-size: 3rem;
+    font-family: "Cookie";
+  }
 }
 
 .card.right {
@@ -44,12 +50,6 @@
   -webkit-animation: slideInUp 2s;
   -moz-animation: slideInUp 2s;
   animation: slideInUp 2s, fade-in 2s;
-}
-
-.sub-title {
-  color: var(--primary-dark-color);
-  font-size: 4rem;
-  font-family: "Cookie";
 }
 
 .line {
@@ -83,7 +83,7 @@ img {
   .card.right {
     margin-bottom: unset;
   }
-  
+
   .card.left {
     margin-top: unset;
   }

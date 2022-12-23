@@ -119,6 +119,7 @@ footer > * {
 }
 
 .main-title-smaller {
+  font-size: 4rem;
   color: var(--primary-dark-color);
 }
 
@@ -225,7 +226,9 @@ footer > * {
   transform-origin: 0 50%;
   pointer-events: none;
   -webkit-animation-name: text-revealer;
-  animation-name: text-revealer;
+  animation: text-revealer 2s ease-in;
+  // animation-delay: 0.5s;
+
 }
 
 @-webkit-keyframes clip-text {
