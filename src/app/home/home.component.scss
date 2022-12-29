@@ -39,7 +39,7 @@
 
 .logo {
   padding-left: 25px;
-  height: 10em;
+  height: 5em;
 }
 
 .bar-container {
@@ -106,18 +106,6 @@ footer > * {
   white-space: nowrap;
 }
 
-.scroll-btn {
-  position: fixed;
-  display: none;
-  right: 0;
-  bottom: 0;
-  margin: 1rem;
-  border-radius: 100%;
-  width: 48px;
-  height: 48px;
-  mix-blend-mode: overlay;
-}
-
 .main-title-smaller {
   font-size: 4rem;
   color: var(--primary-dark-color);
@@ -152,6 +140,10 @@ footer > * {
 
   .main-title-smaller {
     font-size: 2.5rem;
+  }
+
+  .text-container-small {
+    padding: 10vh;
   }
   
   .right {
