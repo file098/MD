@@ -107,8 +107,15 @@ footer > * {
 }
 
 .main-title-smaller {
-  font-size: 4rem;
+  padding: 0 2rem;
+  font-size: 52px;
   color: var(--primary-dark-color);
+}
+
+.text-container-small {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media all and (min-width: 481px) and (max-width: 1280px) {
@@ -139,7 +146,7 @@ footer > * {
   }
 
   .main-title-smaller {
-    font-size: 2.5rem;
+    font-size: 36px;
   }
 
   .text-container-small {
