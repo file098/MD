@@ -77,7 +77,7 @@ img {
   }
 
   .sub-title {
-    font-size: 2rem;
+    font-size: 2rem !important;
   }
 
   .card.right {
@@ -86,6 +86,10 @@ img {
 
   .card.left {
     margin-top: unset;
+  }
+
+  img {
+    max-width: 65%;
   }
 }
 
